@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  span {
+    font-family: cambaria;
+    background-color: white;
+    padding-right: 88%;
+    color: #dbbd8b;
+    font-size: 70px;
+  }
+  
+  div.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+  
+  .container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  
+  /* Style the header */
+  header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f0c44b88;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+  }
+  
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  
+  /* Style the footer */
+  footer {
+    font-size: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #aba5a5;
+    padding: 0px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
